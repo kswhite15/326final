@@ -4,11 +4,6 @@ from matplotlib import pyplot as plt
 import datetime
 import sys
 
-consumer_key = 'TRkcRfwywbyBui3ctoVuQFF77'
-consumer_secret = 'SqdZmOajDkw6H2YZ8Qlr7W1CXAN2eEpqkLQmUis2n3kZ0EZeog'
-access_token = '1201881512075055104-0YXbx2CjS2Y0SdXQsB6fSch6VpOv3w'
-access_token_secret = 'nrw0DogwIkKnNy7gmSznGM9maLeKMe87EgFzHgQ8ZnYrV'
-
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
