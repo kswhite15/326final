@@ -19,6 +19,6 @@ To run this script, you'll need python 3.7 and the following libraries:
 
 # Running the application
 
-Clone this repository to your computer. Finally, within the cloned folder, type the following in the command line to run the script locally:
+Clone our repository. Once within the dowloaded folder, enter in the following command to your terminal to run our script:
 
-`python3 stream.py`
+`python3 petty_politician.py`
