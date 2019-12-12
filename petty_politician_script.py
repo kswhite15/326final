@@ -4,6 +4,10 @@ from matplotlib import pyplot as plt
 import datetime
 import sys
 
+consumer_key = '' #your key here
+consumer_secret = '' #your key here
+access_token = '' #your key here
+access_token_secret = '' #your key here
 
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
