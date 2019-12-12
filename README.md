@@ -3,7 +3,7 @@
 
 The purpose of this tool is to search through tweets using a real-time Twitter API to visualize the sentiments of 2020 U.S. presidential candidates. Users can search for up to 18 candidates that are currently in the race, as December 12th, 2019. The scope of this project is limited by analyzing 200 tweets per candidate, for each query. This program will graph the percentage of positive, negative and neutral sentiments towards each candidate in the form of three separate pie charts. 
 
-Keep up in mind that [Twitter statuses/filter API](https://developer.twitter.com/en/docs/tweets/filter-realtime/overview.htmls) has a 400 keywords limit for streaming realtime tweets.
+Keep up in mind that [Twitter statuses/filter API](https://developer.twitter.com/en/docs/tweets/filter-realtime/overview.htmls) has a 400 keyword limit for streaming realtime tweets.
 
 # Requirements
 
