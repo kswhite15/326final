@@ -137,11 +137,14 @@ if len(sys.argv) < 3:
     sys_list = []
     while True:
         print("Enter ALL the candidate handles you would like to search")
-        search_string = input('Use the format "@Candidate" (q to quit): ')
+        search_string = input('Use the format "@Candidate" (Enter "q" to generate graph): ')
         split_search_string = search_string.split()
         for candidate_name in split_search_string:
             if candidate_name == "q":
                 continue
+            elif len(sys_list) >= 18:
+                print("Sorry, you cannot have more than 18 search terms.")
+                print("Please enter 'q' to generate your graph now")
             else:
                 sys_list.append(candidate_name)
 
