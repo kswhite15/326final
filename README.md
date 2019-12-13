@@ -31,16 +31,16 @@ To run this script, you'll need python 3.7 and the following libraries:
 
 This is a command line program. When running this script in your terminal, please type in the Twitter handle of each 2020 Presidential candidate that you are interested in learning about OR enter ‘all’ to view the results of all 18 candidates who are still in the race. 
 
-*Example command line: 
+*Example command line:*
 ‘Python3 filename.py @TulsiGabbard @realDonalTrump @ewarren’
 
-*Example search if not entering a search into initial command line that runs the file:
+*Example search if not entering a search into initial command line that runs the file:*
 '@TulsiGabbard @realDonalTrump @ewarren'
 
-*How to quit from the interactive search:
+*How to quit from the interactive search:*
 Enter 'q' into the search prompt
 
-*How to generate a graph from the interactive search:
+*How to generate a graph from the interactive search:*
 Enter 'graph' into the search prompt
 
 Please note that currently when the program runs all three graph windows will likely pop-up directly behind one another. Please drag the windows to view all three next to each other.
