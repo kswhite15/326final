@@ -14,7 +14,7 @@ To accomplish this aim, the program searches through tweets using a real-time Tw
 * Users can also run the script without an initial search. 
 * NOTE: If they choose to do a search in the initial command line, they will only be able to search once. If the user wants a more ongoing experience where they can generate several graphs or gradually search for candidates across several search entries, this is also possible. By running the script without an initial search term, the user will enter this interactive mode. 
 
-# Constraints
+# Constraints of the API
 The scope of this project is limited by the constraints of the only Twitter API we were able to access for free which allows the retrieval of only up to 200 tweets for a given search, and only real-time searching with no feature for retrieving tweets outside of this time constraint. This created an exciting challenge to restructure our initial idea while remaining true to our users' needs and our core objective.
 
 # Module Requirements
