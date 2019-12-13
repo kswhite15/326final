@@ -3,7 +3,7 @@
 
 Live-tweeting is the act of a Twitter user posting tweets in real time of their responses to an event, and in this case, the 2020 presidential debates. The advent of the phenomenon of "live-tweeting" presidential debates on Twitter brings with it a desire for a more immersive way to participate and understand that practice. 
 
-To fulfill this desire is Petty Politician (the name serving as a tongue-in-cheek nod to the increasingly dramatic culture of the debates and those who tweet about them). Users enjoy not only voicing their own opinions on what a given candidate has just said, but also gauging if their sentiment is shared by others. This is what Petty Politician seeks to provide– a tool to understand how Twitter users feel about the statements a candidate has made during a given debate.
+To fulfill this desire is Petty Politician (the name serving as a tongue-in-cheek nod to the increasingly dramatic culture of the debates and those who tweet about them). Users enjoy not only voicing their own opinions on what a given candidate has just said, but also gauging if their sentiment is shared by others. This is what Petty Politician seeks to provide– a tool to understand how Twitter users feel about the statements a candidate has made during a given debate in real-time to make the user feel more connected with others in their feelings.
 
 To accomplish this aim, the program searches through tweets using a real-time Twitter API to visualize the sentiments of the 2020 U.S. presidential candidates the user queries. Visualizations of the sentiments about the candidates the user searched are displayed in a series of three pie charts for the percentage of total tweets that were positive, negative, and neutral in their sentiments. 
 
