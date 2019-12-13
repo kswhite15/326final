@@ -1,11 +1,23 @@
 # 326final
 # About
 
-The purpose of this tool is to search through tweets using a real-time Twitter API to visualize the sentiments of 2020 U.S. presidential candidates. Users can search for up to 18 candidates that are currently in the race, as December 12th, 2019. The scope of this project is limited by analyzing 200 tweets per candidate, for each query. This program will graph the percentage of positive, negative and neutral sentiments towards each candidate in the form of three separate pie charts. 
+Live-tweeting is the act of a Twitter user posting tweets in real time of their responses to an event, and in this case, the 2020 presidential debates. The advent of the phenomenon of "live-tweeting" presidential debates on Twitter brings with it a desire for a more immersive way to participate and understand that practice. 
 
-Keep up in mind that [Twitter statuses/filter API](https://developer.twitter.com/en/docs/tweets/filter-realtime/overview.htmls) has a 400 keyword limit for streaming realtime tweets.
+To fulfill this desire is Petty Politician (the name serving as a tongue-in-cheek nod to the increasingly dramatic culture of the debates and those who tweet about them). Users enjoy not only voicing their own opinions on what a given candidate has just said, but also gauging if their sentiment is shared by others. This is what Petty Politician seeks to provide– a tool to understand how Twitter users feel about the statements a candidate has made during a given debate.
 
-# Requirements
+To accomplish this aim, the program searches through tweets using a real-time Twitter API to visualize the sentiments of the 2020 U.S. presidential candidates the user queries. Visualizations of the sentiments about the candidates the user searched are displayed in a series of three pie charts for the percentage of total tweets that were positive, negative, and neutral in their sentiments. 
+
+# Features of the Search
+* Users can search for up to 18 candidates that are currently in the race, as of December 12th, 2019. 
+* There is also an option for the user to enter "all" as a search, which will save them time through concisely searching for each candidate and returning results without the user having to enter in each candidate as a search.
+* Users can enter in a search of two or more candidates for comparison in their initial sys.argv command line entry to run the script.
+* Users can also run the script without an initial search. 
+* NOTE: If they choose to do a search in the initial command line, they will only be able to search once. If the user wants a more ongoing experience where they can generate several graphs or gradually search for candidates across several search entries, this is also possible. By running the script without an initial search term, the user will enter this interactive mode. 
+
+# Constraints
+The scope of this project is limited by the constraints of the only Twitter API we were able to access for free which allows the retrieval of only up to 200 tweets for a given search, and only real-time searching with no feature for retrieving tweets outside of this time constraint. This created an exciting challenge to restructure our initial idea while remaining true to our users' needs and our core objective.
+
+# Module Requirements
 
 To run this script, you'll need python 3.7 and the following libraries: 
 
