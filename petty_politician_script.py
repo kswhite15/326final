@@ -8,10 +8,15 @@ Assignment: Final Project
 '''
 
 import tweepy
+
 from textblob import TextBlob
+
 from matplotlib import pyplot as plt
+
 import datetime
+
 import sys
+
 
 # Define consumer keys and access tokens
 consumer_key = '' #your key here
@@ -19,10 +24,14 @@ consumer_secret = '' #your key here
 access_token = '' #your key here
 access_token_secret = '' #your key here
 
+
 # Access Twitter API
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+
 auth.set_access_token(access_token, access_token_secret)
+
 api = tweepy.API(auth)
+
 
 class CandidateAnalysis():
     '''A class which creates a unique instance for every
@@ -34,6 +43,7 @@ class CandidateAnalysis():
 
     def __init__(self, single_candidate):
         '''Create attribute for a single candidate'''
+        
         self.candidate = single_candidate
 
 
@@ -41,6 +51,7 @@ class CandidateAnalysis():
         '''This is a variable which searches Twitter using its
         API to retrive up to 200 tweets relating to the
         candidate handle that was searched:'''
+        
         public_tweets=api.search(single_candidate, count = 200)
 
 
@@ -55,7 +66,9 @@ class CandidateAnalysis():
         self.candidate_sentiment = []
 
         for tweet in public_tweets:
+            
             analysis= TextBlob(tweet.text)
+            
             self.candidate_sentiment.append(analysis.sentiment[0])
 
 
@@ -74,26 +87,33 @@ def main(CandidateAnalysis):
     user input. It also allows the user to enter in "all" to search every
     candidate without having to enter them in one by one.'''
 
+
     def pie_chart(sys_list):
         '''Create Graphs of Tweet Sentiment separated by feeling'''
+        
         #count of pos tweets for each candiate [150, 200, 400]
         positive = []
+        
         #count of neg tweets for each candiate [150, 200, 400]
         negative= []
+        
         #count of neu tweets for each candiate [150, 200, 400]
         neutral= []
 
+        
         for candidate_name in sys_list:
 
             conduct_analysis = CandidateAnalysis(candidate_name)
 
             instance_sentiment = conduct_analysis.sentiment(candidate_name)
 
+                
             #initalizes sentiment counts
             pos_count=0
             neu_count=0
             neg_count=0
 
+                
             #grading individual tweet sentiments
             for single_sentiment in conduct_analysis.candidate_sentiment:
 
@@ -106,6 +126,7 @@ def main(CandidateAnalysis):
                 else:
                     pos_count +=1
 
+                
             #appending candidate's total counts to the repsective lists
             positive.append(pos_count)
             negative.append(neg_count)
@@ -117,6 +138,7 @@ def main(CandidateAnalysis):
                 'pink', 'teal','yellowgreen', 'gold', 'coral', 'lavenderblush',
                 'skyblue','lime', 'indigo','cyan','magenta']
 
+        
         length_list = len(sys_list)
 
         color_list = []
@@ -132,14 +154,14 @@ def main(CandidateAnalysis):
         except:
             print("Color list test failed!")
 
+        
         # postive tweets graph
         plt.figure(1) #creates seprate graphs
 
         plt.pie(positive,labels= sys_list,autopct='%1.1f%%',colors=color_list)
 
-        # labeling pie sections by candidate, displaying the percetange...
-
-        # they have and assigning clear colors
+        # labeling pie sections by candidate, displaying the percetange
+        # they have, and assigning clearly defined colors
 
         plt.title("Postive Tweets", size=24, weight='bold') #Bold title
 
@@ -169,9 +191,11 @@ def main(CandidateAnalysis):
 
         plt.show()
 
+        
     def all_candidates(sys_list):
         '''Create pie chart for all candidates currently in the race'''
 
+        
         if sys_list[0] == "all":
 
             sys_list= ["@MichaelBennet", "@JoeBiden", "@MikeBloomberg",
@@ -183,17 +207,21 @@ def main(CandidateAnalysis):
 
             pie_chart(sys_list)
 
+                
     # Empty list to hold command line arguments
     sys_list = []
 
+        
     # If the user has not entered in at least two handles for comparison
     # into the initial sys.argv in the command line, then run this script:
     if len(sys.argv) < 3:
 
+        
         while True:
 
             print("Enter ALL the candidate handles you would like to search")
             print('Use the format "@Candidate"')
+           
             search_string = input('(Enter graph to make graph, q to quit): ')
 
 
@@ -210,6 +238,7 @@ def main(CandidateAnalysis):
 
 
             split_search_string = search_string.split()
+            
             for candidate_name in split_search_string:
 
                 if candidate_name == "q":
@@ -238,22 +267,24 @@ def main(CandidateAnalysis):
 
 
             if search_string == "graph":
+            
             # Checks to make sure that it should not run the pie_chart
             # function if the all_candidates function has already been run:
                 if "all" not in sys_list:
                     pie_chart(sys_list)
 
 
-# If the user has entered two handles for comparison, or more,
-# into the initial sys.argv in the command line then run this script:
+    # If the user has entered two handles for comparison, or more,
+    # into the initial sys.argv in the command line then run this script:
     elif len(sys.argv) >= 3:
 
         sys_list = sys.argv[1:]
 
         all_candidates(sys_list)
 
-    # Checks to make sure that it should not run the pie_chart
-    # function if the all_candidates function has already been run:
+        
+        # Checks to make sure that it should not run the pie_chart
+        # function if the all_candidates function has already been run:
         if "all" not in sys_list:
             pie_chart(sys_list)
 
