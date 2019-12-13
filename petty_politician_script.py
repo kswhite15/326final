@@ -222,6 +222,7 @@ def main(CandidateAnalysis):
             print("Enter ALL the candidate handles you would like to search")
             print('Use the format "@Candidate"')
             print('To conduct a fresh search with all new search terms, re-run the program.')
+        
            
             search_string = input('(Enter graph to make graph, q to quit): ')
 
