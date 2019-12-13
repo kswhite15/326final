@@ -14,16 +14,10 @@ import datetime
 import sys
 
 # Define consumer keys and access tokens
-'''
 consumer_key = '' #your key here
 consumer_secret = '' #your key here
 access_token = '' #your key here
-access_token_secret = '' #your key here'''
-
-consumer_key = 'TRkcRfwywbyBui3ctoVuQFF77'
-consumer_secret = 'SqdZmOajDkw6H2YZ8Qlr7W1CXAN2eEpqkLQmUis2n3kZ0EZeog'
-access_token = '1201881512075055104-0YXbx2CjS2Y0SdXQsB6fSch6VpOv3w'
-access_token_secret = 'nrw0DogwIkKnNy7gmSznGM9maLeKMe87EgFzHgQ8ZnYrV'
+access_token_secret = '' #your key here
 
 # Access Twitter API
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
